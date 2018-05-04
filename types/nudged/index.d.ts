@@ -35,6 +35,7 @@ declare module "nudged" {
 
 
         getMatrix():Matrix;
+        transform(p:number[]):number[];
         
         getRotation():number;
         getScale():number;
