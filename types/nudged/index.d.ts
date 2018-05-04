@@ -1,3 +1,5 @@
+//Definitions by: Fabien Ancelin <https://github.com/fabanc>
+
 declare module "nudged" {
 
 
@@ -35,7 +37,7 @@ declare module "nudged" {
 
 
         getMatrix():Matrix;
-        transform(p:number[]):number[];
+        transform(p:ReadonlyArray<number>):number[];
         
         getRotation():number;
         getScale():number;
@@ -44,8 +46,8 @@ declare module "nudged" {
 
         inverse():Transform;
         translateBy(dx:number, dy:number):Transform;
-        scaleBy(multiplier:number, pivot?:number[]):Transform;
-        rotateBy(radians:number, pivot?:number[]):Transform;
+        scaleBy(multiplier:number, pivot?:ReadonlyArray<number>):Transform;
+        rotateBy(radians:number, pivot?:ReadonlyArray<number>):Transform;
         multiplyBy(transform:Transform):Transform;
 
     }
